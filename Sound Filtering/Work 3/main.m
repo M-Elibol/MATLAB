@@ -1,0 +1,15 @@
+[data,fs]= audioread("ses_musab_elibol.mp3");
+[data2,fs]= audioread("ses_arda_turan.mp3");
+[data3,fs]= audioread("ses_semih_senturk.mp3");
+t1=linspace(0,length(data)/fs,length(data));
+t2=linspace(0,length(data2)/fs,length(data2));
+t3=linspace(0,length(data3)/fs,length(data3));
+f1=-fs/2:fs/(length(data)-1):fs/2;
+f2=-fs/2:fs/(length(data2)-1):fs/2;
+f3=-fs/2:fs/(length(data3)-1):fs/2;
+z1=fftshift(fft(data));
+z2=fftshift(fft(data2));
+z3=fftshift(fft(data3));
+figure;plot(f1,(abs(z1)));
+figure; plot(f2,(abs(z2)));
+figure; plot(f3,(abs(z3)));
