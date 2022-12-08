@@ -1,1 +1,1 @@
-"Image1.png" file is used in all filters
+"Image1.jpg" file is used in all filters
